@@ -1,0 +1,25 @@
+import pygame, sys, random
+from pygame.locals import *
+
+
+
+def main():
+    pygame.init()
+    clock = pygame.time.Clock()
+    screen = pygame.display.set_mode((640,400))
+    screen.fill((255, 200, 255))
+    pygame.display.set_caption("Slide Puzzle with your Picture")
+    
+    playing = True
+    while playing:
+        time = clock.tick(50) #similar to timerDelay
+
+    for event in pygame.event.get():
+        if event.type == pygame.KEYDOWN:
+            playing = False
+    
+    pygame.quit()   
+    
+    
+if __name__ == '__main__':
+    main()
